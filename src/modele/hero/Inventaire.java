@@ -1,10 +1,11 @@
 package modele.hero;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Inventaire {
 
-    private Map<ItemType,Integer> contenus;
+    private Map<ItemType, Integer> contenus = new HashMap<>(); // Initialisation de la Map
 
     public void ajouterItem(ItemType type, Integer quantite) {
         contenus.merge(type, quantite, Integer::sum);

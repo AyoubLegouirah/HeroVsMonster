@@ -18,7 +18,7 @@ public abstract class Hero extends Personnage {
     // Après chaque combat les héros se reposent et restaurent leurs points de vie et affronte
     // le monstre suivant jusqu’à leur mort3.
 
-    int repos =  10;
+    int repos =  5;
     public void restaurerPv() {
         this.pv += repos;
         if (this.pv < 0) {
