@@ -2,19 +2,17 @@ package modele.monstre;
 
 import utilitaire.Des;
 
-public class Dragonnet extends Monstre  {
+public class Dragonnet extends Monstre implements ICuir, IOr {
     public Dragonnet(){
         super(1,0);
-
-        int nbrCuir = Des.D4.roll(1,1);
-        /*
-        if(Monstre.pv <= 0){
-            nbrCuir--;
-            System.out.println("Dragonnet a donner " + nbrCuir + " cuir()");
-        }
-
-         */
-
-
     }
+
+    public int getCuir() {
+        return Des.D4.roll();
+    }
+
+    public int getOr() {
+        return Des.D6.roll();
+    }
+
 }

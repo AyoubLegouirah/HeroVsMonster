@@ -1,13 +1,10 @@
 package modele;
-
-import modele.hero.Nain;
-import modele.monstre.IOr;
 import utilitaire.Des;
 
 public abstract class Personnage {
     private int endurance;
     private int force;
-    private int pv;
+    protected int pv;
 
 
     public Personnage(int bonusEndurance, int bonusForce) {
@@ -70,6 +67,11 @@ public abstract class Personnage {
         else {
             cible.takeDamage(degats + 2);;
         }
+    }
+
+    public void mourir (Personnage personnage){
+        if(personnage.pv <= 0){
+        }else {}
     }
 
 
