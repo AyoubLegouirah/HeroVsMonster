@@ -1,4 +1,4 @@
-package modele.hero;
+package game;
 
 public enum ItemType {
     OR,

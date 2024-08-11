@@ -1,6 +1,8 @@
+package map;
+
 import modele.hero.Hero;
 import modele.hero.Humain;
-import modele.hero.ItemType;
+import game.ItemType;
 import modele.hero.Nain;
 import modele.monstre.Dragonnet;
 import modele.monstre.Loup;
@@ -64,6 +66,8 @@ public class Main {
                     System.out.println("Le Dragonnet est vaincu ! Il libère " + dragonnet.getCuir() + " cuir et " + dragonnet.getOr() + " or.");
                     hero.getInventaire().ajouterItem(ItemType.CUIR, dragonnet.getCuir());
                     hero.getInventaire().ajouterItem(ItemType.OR, dragonnet.getOr());
+
+
                 } else if (ennemi instanceof Loup) {
                     Loup loup = (Loup) ennemi;
                     System.out.println("Le Loup est vaincu ! Il libère " + loup.getCuir() + " cuir.");
@@ -73,6 +77,15 @@ public class Main {
                     System.out.println("L'Orque est vaincu ! Il libère " + orque.getOr() + " or.");
                     hero.getInventaire().ajouterItem(ItemType.OR, orque.getOr());
                 }
+
+                // Faire en sorte de afficher l'inventaire
+                /*
+                System.out.println("Inventaire :");
+                for (ItemType itemType : ItemType.values()) {
+                    System.out.println(itemType + " : " + hero.getInventaire().getItem(itemType));
+                }
+
+                 */
 
                 hero.restaurerPv();
                 System.out.println("Tu te reposes et récupères des points de vie. Tu as maintenant " + hero.getPv() + " PV.");

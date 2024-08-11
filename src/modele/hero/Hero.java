@@ -1,5 +1,6 @@
 package modele.hero;
 
+import game.Inventaire;
 import modele.Personnage;
 
 public abstract class Hero extends Personnage {
