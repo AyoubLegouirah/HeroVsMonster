@@ -1,5 +1,7 @@
 package game;
 
+import modele.monstre.Monstre;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,4 +17,6 @@ public class Inventaire {
         return contenus.getOrDefault(type, 0);
     }
 
+    public void ajouterItem(Monstre m) {
+    }
 }

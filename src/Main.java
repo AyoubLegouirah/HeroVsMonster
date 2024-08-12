@@ -1,5 +1,3 @@
-package map;
-
 import modele.hero.Hero;
 import modele.hero.Humain;
 import game.ItemType;
@@ -37,6 +35,7 @@ public class Main {
 
         // Liste des ennemis à affronter
         Monstre[] ennemis = {new Dragonnet(), new Loup(), new Orque()};
+        // Monstre[] ennemis = random.choice(new Monstre);
 
         for (Monstre ennemi : ennemis) {
             System.out.println("Un " + ennemi.getClass().getSimpleName() + " apparaît avec " + ennemi.getPv() + " PV !");
@@ -80,11 +79,7 @@ public class Main {
 
                 // Faire en sorte de afficher l'inventaire
                 /*
-                System.out.println("Inventaire :");
-                for (ItemType itemType : ItemType.values()) {
-                    System.out.println(itemType + " : " + hero.getInventaire().getItem(itemType));
-                }
-
+                System.out.println("Inventaire :" + hero.loot(ennemi));
                  */
 
                 hero.restaurerPv();
@@ -94,3 +89,4 @@ public class Main {
         System.out.println("Félicitations ! Tu as vaincu tous les ennemis !");
     }
 }
+
